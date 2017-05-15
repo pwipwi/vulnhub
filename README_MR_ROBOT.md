@@ -133,10 +133,10 @@ wpscan --url http://192.168.1.31 --wordlist /root/Desktop/fsocity.dic --username
 Since it was taking forever and I noticed some dupplicate while fuzzing with the same dict I decided to reduce the file.<br>
 
 # What about WP password (round2)
-root@kali:~# sort fsocity.dic | uniq  > test.txt<br>
-root@kali:~# wc -l fsocity.dic <br>
+root@kali:~ sort fsocity.dic | uniq  > test.txt<br>
+root@kali:~ wc -l fsocity.dic <br>
 858160 fsocity.dic<br>
-root@kali:~# wc -l test.txt <br>
+root@kali:~ wc -l test.txt <br>
 11451 test.txt<br>
 => You should always sort dict before using them. Do not trust what you've been give. <br>
 
